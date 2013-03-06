@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">World\'s Smallest Violin</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="violin_image">Violin Image</string>
+    <string name="stage_image">Stage</string>
+    <string name="title_activity_main">World\'s Smallest Violin</string>
+    <string name="play_on_load_enable">Enable Auto Play</string>
+    <string name="play_on_load_disable">Disable Auto Play</string>
+    <string name="settings">Settings</string>
+    <string name="options">Options</string>
+	<string name="about">About</string>
+	<string name="suggestions">Feedback</string>
+
+   <string name="inline_preferences">Settings and Preferences</string>
+   <string name="launch_preferences">Images</string>
+   
+    <string name="dialog_based_preferences">Dialog-based preferences</string>
+    <string name="preference_attributes">Preference attributes</string>
+
+    <string name="title_preference_autoplay">Auto play</string>
+    <string name="summary_preference_autoplay_desc">Violin will play automatically as soon as the app has launched</string>
+
+    <string name="title_preference_disable_ads">Disable Adverts</string>
+    <string name="summary_preference_disable_ads_desc">Setting this option will disable all adverts on next load</string>
+	
+</resources>

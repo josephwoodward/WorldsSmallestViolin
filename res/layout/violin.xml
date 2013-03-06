@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<ImageView 
+		android:id="@+id/violin_image"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_gravity="center_horizontal|bottom"
+		android:scaleType="fitXY"
+		android:contentDescription="@string/violin_image"
+		android:src="@drawable/violin_1"
+	/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/xy_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+		<ImageView 
+	    	android:id="@+id/bow_image"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:contentDescription="@string/violin_image"
+	        android:src="@drawable/bow"
+			/>
+		</RelativeLayout>
+</FrameLayout>
+
+
+
+

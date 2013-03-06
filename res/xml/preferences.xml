@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/inline_preferences">
+        <!-- <CheckBoxPreference
+                android:key="autoplay"
+                android:title="@string/title_preference_autoplay"
+                android:summary="@string/summary_preference_autoplay_desc"
+                />		 -->
+		<CheckBoxPreference
+                android:key="disable_ads"
+                android:title="@string/title_preference_disable_ads"
+                android:summary="@string/summary_preference_disable_ads_desc"
+                />
+    </PreferenceCategory>
+    
+    
+
+    <!-- <PreferenceCategory
+            android:title="@string/launch_preferences">
+        <PreferenceScreen
+                android:title="@string/title_intent_preference"
+                android:summary="@string/summary_intent_preference">
+            <intent android:action="com.xeuse.smallestviolin.CHOOSE_BACKGROUND" />
+        </PreferenceScreen>
+    </PreferenceCategory> -->
+
+</PreferenceScreen>
