@@ -1,7 +1,10 @@
 package com.xeuse.smallestviolin;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
+import android.content.SharedPreferences;
 import com.actionbarsherlock.app.SherlockActivity;
 
 import android.content.Context;
@@ -15,11 +18,25 @@ public abstract class Instrument {
 	private SherlockActivity activity;
 	private Context context;
 	private ViewStub stub;
-	private String mp3_tune = "tune_1.mp3";
-	
+	private String defaultMp3 = "tune_1.mp3";
+	private String mp3_tune;
+
 	public Instrument(SherlockActivity mainActivity) {
 		activity = mainActivity;
 		context = activity.getApplicationContext();
+
+        //Set audio file
+        SharedPreferences prefs = activity.getSharedPreferences("com.xeuse.smallestviolin", Context.MODE_PRIVATE);
+        mp3_tune = prefs.getString("mp3Path", null);
+
+        if (mp3_tune != null) {
+            try {
+                mp3_tune = URLDecoder.decode(mp3_tune, "UTF-8");
+            } catch(UnsupportedEncodingException exception) {
+                exception.printStackTrace();
+            }
+        }
+
 		initAudio(context);
 	}
 
@@ -35,8 +52,7 @@ public abstract class Instrument {
 		
 		AssetFileDescriptor asset;
 		try {
-
-			asset = ctx.getAssets().openFd(mp3_tune);
+			asset = ctx.getAssets().openFd((mp3_tune != null) ? mp3_tune : defaultMp3);
 			player = new MediaPlayer();
 			player.setDataSource(asset.getFileDescriptor());
 			player.prepare();

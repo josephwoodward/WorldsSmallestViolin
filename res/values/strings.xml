@@ -24,5 +24,7 @@
 
     <string name="title_preference_disable_ads">Disable Adverts</string>
     <string name="summary_preference_disable_ads_desc">Setting this option will disable all adverts on next load</string>
-	
+    <string name="Choose_custom_mp3">Choose Custom mp3</string>
+    <string name="Choose_your_own_mp3_to_play">Play your favourite mp3 with the world\'s smallest violin</string>
+
 </resources>

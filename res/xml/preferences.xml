@@ -14,6 +14,13 @@
                 android:title="@string/title_preference_disable_ads"
                 android:summary="@string/summary_preference_disable_ads_desc"
                 />
+
+        <PreferenceScreen
+                android:title="@string/Choose_custom_mp3"
+                android:summary="@string/Choose_your_own_mp3_to_play">
+                <intent android:action="com.xeuse.smallestviolin.ChooseMp3" />
+        </PreferenceScreen>
+
     </PreferenceCategory>
     
     
